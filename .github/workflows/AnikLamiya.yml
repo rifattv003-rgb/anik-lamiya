@@ -34,9 +34,9 @@ jobs:
         working-directory: ${{ steps.locate.outputs.proj_dir }}
         run: npm install
 
-      - name: Render video
+      - name: Render AnikLamiya composition
         working-directory: ${{ steps.locate.outputs.proj_dir }}
-        run: npx remotion render src/index.ts Main out/anik-lamiya.mp4
+        run: npx remotion render src/index.ts AnikLamiya out/anik-lamiya.mp4
 
       - name: Upload rendered video artifact
         uses: actions/upload-artifact@v4
